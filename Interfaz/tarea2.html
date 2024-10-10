@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            height: 100vh;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <form action="/procesar" method="post">
+            <label for="name">Nombre completo:</label>
+            <input type="text" id="name"><br><br>
+
+            <label for="age">Edad:</label>
+            <input type="number" id="age"><br><br>
+
+            <label for="gender">Género:</label>
+            <input type="radio" id="m" name="gender" value="m">
+            <label for="m">m</label>
+            <input type="radio" id="h" name="gender" value="h">
+            <label for="h">h</label>
+            <input type="radio" id="ns" name="gender" value="ns">
+            <label for="ns">ns</label><br><br>
+
+            <label for="grade">¿Que ciclo cursa?:</label>
+            <select name="grade" id="grade">
+                <option value="DAW">DAW</option>
+                <option value="DAM">DAM</option>
+                <option value="SMR">SMR</option>
+                <option value="ASIR">ASIR</option>
+            </select><br><br>
+
+            <label for="second_cur">¿Segundo curso?</label>
+            <input type="checkbox" name="second_cur" id="second_cur" value="true"><br>
+
+            <label for="comentario">Comentario acerca del cliclo:</label><br>
+            <textarea name="comentario" id="comentario"></textarea><br><br>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+
+        </form>
+    </fieldset>
+</body>
+
+</html>

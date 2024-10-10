@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tarea 3</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            height: 100vh;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <form action="/procesar" method="post">
+            <label for="name">Nombre completo:</label>
+            <input type="text" id="name"><br><br>
+
+            <label for="age">Edad:</label>
+            <input type="number" id="age"><br><br>
+
+            <label for="visit">¿Has visitado alguna vez este sitio?:</label>
+            <select name="visit" id="visit">
+                <option value="Si">Sí</option>
+                <option value="No">No</option>
+            </select><br><br>
+
+            <label for="better">¿Qué es lo que más te gustó?:</label><br>
+            <textarea name="comentary" id="comentary"></textarea><br><br>
+
+            <label for="seasson">Selecciona tu estación favorita para viajar:</label>
+            <select name="grade" id="grade">
+                <option value="spreeng">Primavera</option>
+                <option value="summer">Verano</option>
+                <option value="fall">Otoño</option>
+                <option value="winter">Invierno</option>
+            </select><br><br>
+
+            <input type="submit" value="Enviar">
+            <button><a href="primeraweb.html">Inicio</a></button>
+        </form>
+    </fieldset>
+</body>
+
+</html>
