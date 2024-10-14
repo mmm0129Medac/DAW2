@@ -1,0 +1,27 @@
+.listado{
+    display:flex; 
+    padding: 0;
+}
+
+
+.listado li{
+    margin: 2%;
+}
+
+
+.navegacion{
+    display: flex;
+    justify-content: space-around;
+    background-color: #7fe7ffb0;
+    padding: 2%;
+}
+
+
+li{
+    list-style:none;
+}
+
+
+.centrar{
+    text-align: center;
+}
