@@ -1,0 +1,38 @@
+header {
+    background-color: #2641c4;
+    color: white;
+    padding: 0.5rem;
+}
+
+#main {
+    background-color: #12cedc;
+    color: white;
+    padding: 0.5rem;
+}
+#aside {
+    background-color: #71d8dc;
+    color: black;
+    padding: 0.5rem;
+    height: fit-content;
+
+}
+.flex-sm-row {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#target {
+    background-color: #2196f3;
+    color: white;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#target{
+    margin: 0;
+}
+footer {
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    
+}
