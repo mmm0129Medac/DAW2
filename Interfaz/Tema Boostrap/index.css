@@ -1,0 +1,7 @@
+.row {
+    height: 150px;
+    border-style: solid;
+}
+.col {
+    border: solid;
+}

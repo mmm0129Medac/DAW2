@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
@@ -12,55 +12,80 @@
         <nav class="navegacion">
             <ul><a href="#suscribete">Suscribete</a></ul>
             <ul><a href="#juegos">Juegos</a></ul>
-            <ul><a href="#contacta">Contacta</a></ul>
+            <ul><a href= "mailto:email@sindominio.com?subject=Contacta con la Biblio">Contacta</a></ul>
         </nav>
     </header>
 
     <main>
         <section id="libros">
             <h2>LIBROS</h2>
-            <ul class="listado">
+            <ul class="listado" id="books_list">
+
                 <!-- Aqui se inyectan los datos de los libros -->
+            
             </ul>
         </section>
         <section id="suscribete">
             <h2>SUSCRIBETE</h2>
             <h3>Al suscripirte recibirás noticias en tu email</h3>
-            <form>
-                <div>
-                    <label>Nombre</label>
-                    <input class="input-text" type="text" required>
-                </div>
-                <div>
-                    <label>Apellidos</label>
-                    <input class="input-text" type="text" required>
-                </div>
-                <div>
-                    <label>Edad</label>
-                    <input class="input-text" type="text" required>
-                </div>
-                <div>
-                    <label>Email</label>
-                    <input class="input-text" type="text" required>
-                </div>
-                <div>
-
-                </div>
-                <div>
-                    <label>Comentario</label>
-                    <textarea class="input-text"></textarea>
-                </div>
+            <form onsubmit="return enviarFormulario()">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre"><br>
+                <label for="apellidos">Apellidos:</label><br>
+                <input type="text" id="apellidos" name="apellidos"><br>
+                <label for="edad">Edad:</label><br>
+                <input type="number" id="edad" name="edad"><br>
+                <label for="email">Email (requerido):</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="tipoLibros">Tipo de libros al que quiere suscribirse:</label><br>
+                <select id="tipoLibros" name="tipoLibros">
+                    <option value="todos">Todos</option>
+                    <option value="terror">Terror</option>
+                    <option value="comedia">Comedia</option>
+                    <option value="suspense">Suspense</option>
+                    <option value="infantil">Infantil</option>
+                </select><br>
+                <label for="notificaciones">Recibir notificaciones acerca de ofertas:</label><br>
+                <input type="radio" id="si" name="notificaciones" value="SI">
+                <label for="si">SI</label>
+                <input type="radio" id="no" name="notificaciones" value="NO">
+                <label for="no">NO</label><br>
+                <label for="comentario">Comentario:</label><br>
+                <textarea id="comentario" name="comentario"></textarea><br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
             </form>
         </section>
         <section id="juegos">
             <h2>JUEGOS</h2>
             <h3>Sopa de letras</h3>
+            <table>
+                <tr>
+                    <td>S</td><td>F</td><td>E</td><td>W</td><td>M</td><td>L</td>
+                </tr>
+                <tr>
+                    <td>Z</td><td>R</td><td>K</td><td>X</td><td>I</td><td>I</td>
+                </tr>
+                <tr>
+                    <td>X</td><td>G</td><td>Q</td><td>B</td><td>T</td><td>B</td>
+                </tr>
+                <tr>
+                    <td>T</td><td>L</td><td>R</td><td>O</td><td>O</td><td>T</td>
+                </tr>
+                <tr>
+                    <td>I</td><td>O</td><td>H</td><td>C</td><td>W</td><td>O</td>
+                </tr>
+                <tr>
+                    <td>S</td><td>U</td><td>O</td><td>N</td><td>A</td><td>S</td>
+                </tr>
+            </table>
+            <br>
+            <button onclick="verificarPalabra()">¡Lo encontré!</button>
             <h3>Adivinanza</h3>
-        </section>
-        <section id="contacta">
-            
-        </section>
-        <script src="main.js"></script>
+            <p>¿Que género de novela escribe Javier Castillo?</p>
+            <input type="text" id="respuesta" placeholder="Introduce tu respuesta aquí">
+            <br><br>
+            <button onclick="verificarRespuesta()">Verificar</button>
     </main>
 
     <footer>
@@ -68,6 +93,6 @@
         <p>Desarrollo Web en entorno cliente</p>
         <p>14 de Octubre de 2024</p>
     </footer>
-
+    <script src="js/main.js"></script>
 </body>
 </html>
