@@ -12,6 +12,8 @@ function init(){
 const listapj = document.getElementById("pjsList");
 var filterR = [];
 
+//Mostrar el 
+
 function showData(data) {
     listapj.innerHTML = " ";
     data.forEach (element => {
@@ -24,6 +26,8 @@ function showData(data) {
         listapj.append(li);         
     })
 }
+
+//Función para filtrar base de datos
 
 function filtrerData (data) {
     var filterR = document.getElementById("razaselector").value;
