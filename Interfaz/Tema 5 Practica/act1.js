@@ -1,6 +1,7 @@
-document.addEventListener("DOMContentLoadede", init);
+document.addEventListener("DOMContentLoaded", init);
 var datapj = [];
 function init(){
+    // Cargar personajes desde el JSON
     fetch('personajes.json')
         .then(response => response.json())
         .then(data => {
@@ -12,7 +13,7 @@ function init(){
 const listapj = document.getElementById("pjsList");
 var filterR = [];
 
-//Mostrar el 
+//Mostrar datos del JSON
 
 function showData(data) {
     listapj.innerHTML = " ";
@@ -39,4 +40,3 @@ function filtrerData (data) {
         showData(data);
     }
 }
-init();
