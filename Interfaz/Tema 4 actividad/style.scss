@@ -1,0 +1,58 @@
+@import "variables";
+
+body {
+  font-family: $fuente-principal;
+}
+h1 {
+  color: $color-primario;
+}
+h2 {
+  color: $color-secundario;
+}
+
+// Mixin para contenedores
+@mixin contenedor-estilo {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.contenedor-hijo {
+  @include contenedor-estilo;
+}
+@for $i from 1 through 3 {
+  .item-#{$i} {
+    &:hover {
+      border: 1px solid red;
+      border-width: 1px * $i;
+    }
+  }
+}
+
+// Definir botones base y específicos
+$boton-base: (
+  padding: 10px 20px,
+  border: none,
+  border-radius: 5px,
+  cursor: pointer,
+);
+.boton-base {
+  @each $prop, $value in $boton-base {
+    #{$prop}: #{$value};
+  }
+}
+.boton-anadir {
+  @extend .boton-base;
+  background-color: $color-primario;
+  color: white;
+  &:hover {
+    background-color: darken($color-primario, 10%);
+  }
+}
+.boton-recetas {
+  @extend .boton-base;
+  background-color: $color-secundario;
+  color: white;
+  &:hover {
+    background-color: darken($color-secundario, 10%);
+  }
+}

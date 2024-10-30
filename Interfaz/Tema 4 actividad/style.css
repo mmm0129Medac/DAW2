@@ -1,0 +1,55 @@
+body {
+  font-family: "Arial, sans-serif";
+}
+
+h1 {
+  color: #3498db;
+}
+
+h2 {
+  color: #c7411f;
+}
+
+.contenedor-hijo {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.item-1:hover {
+  border: 1px solid red;
+  border-width: 1px;
+}
+
+.item-2:hover {
+  border: 1px solid red;
+  border-width: 2px;
+}
+
+.item-3:hover {
+  border: 1px solid red;
+  border-width: 3px;
+}
+
+.boton-base, .boton-recetas, .boton-anadir {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.boton-anadir {
+  background-color: #3498db;
+  color: white;
+}
+.boton-anadir:hover {
+  background-color: #217dbb;
+}
+
+.boton-recetas {
+  background-color: #c7411f;
+  color: white;
+}
+.boton-recetas:hover {
+  background-color: #9b3318;
+}/*# sourceMappingURL=style.css.map */
