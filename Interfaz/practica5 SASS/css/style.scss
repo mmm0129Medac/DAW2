@@ -1,204 +1,81 @@
 @forward 'normalize';
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
 @import 'variables';
 
-
-/* ESTILOS GLOBALES ***************************************************************************************************/
-
-html {
-    max-width: $max-width;
-    margin: 0 auto;
-}
-
-body {
-    font: $cuerpo;
-    color: $default-foreground;
-    margin: 0.5em;
-    @include fuente-titulos;
-}
-
-@media (max-width: 768px) {
-
-    body {
-        margin: $default-margin;
+header{
+    *{
+        text-decoration: none;
     }
-
-}
-
-a {
-    text-decoration: none;
-    color: $default-foreground;
-}
-
-
-/* HEADER *************************************************************************************************************/
-
-header {
-    text-align: center;
-    background-color: $default-background;
-    padding: 0.5em;
-
     img {
         width: 10%;
         float: left;
     }
 
     h1 {
-        width: 90%;
-        color: color-aleatorio("red");
+        font-size: 2.5rem;
+        color: $main-font-color;
     }
 
     h2 {
+        font-size: 1.5rem;
         width: 90%;
-        color: color-aleatorio("green");
+        color: $main-font-color;
     }
 
-    @media (max-width: 768px) {
-
-        img {
-            width: 5em;
-            float: none;
-        }
-
-        h1,
-        h2 {
-            float: none;
-            width: 100%;
-        }
-
-    }
-
-}
-
-
-/* NAV ****************************************************************************************************************/
-
-nav {
-    background-color: $default-background;
-    padding: 0.1em;
-    margin: $separador-margin;
-    text-align: center;
-    text-transform: uppercase;
-
-    ul {
-        @include lista-horizontal;
-
-        a {
-            font-weight: map-get($font-weights, "regular");
-
-            &:hover {
-                text-decoration: underline;
-                font-weight: map-get($font-weights, "bold");
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-
-    nav {
-        margin: $default-margin;
-    }
-
-    ul li {
+    .nav {
+        background-color: $background-pink;
+        padding: 1rem;
         width: 100%;
+        text-align: center;
+        a {
+            color: $main-font-color;
+            background-color: white;
+            padding: .5rem;
+        }
+        div :hover {
+            color: black;
+        }
     }
-
 }
-
-
-/* SECTION ************************************************************************************************************/
 
 section {
 
-    margin: $separador-margin;
-
     article {
         width: 33%;
-        display: inline-block;
+        
         min-height: 16em;
 
         img {
             width: 25%;
-            float: left;
+            
             padding: 0 1em 0 0;
         }
 
         div {
             width: 65%;
-            float: left;
+            
             padding: 1em 1em 0 0;
         }
 
     }
-
-    @include fondo-article;
-
-    @media (max-width: 992px) {
-
-        article {
-            width: 49.7%;
-        }
-
-    }
-
-    @media (max-width: 768px) {
-
-        article {
-            width: 100%;
-            display: block;
-        }
-
-    }
 }
 
-@media (max-width: 768px) {
+// Fondos
 
-    section {
-        margin: $default-margin;
-    }
-
+.bg-l-blue{
+    background-color: $background-l-blue;
 }
-
-
-/* FOOTER *************************************************************************************************************/
-
-footer {
-
-    margin: $separador-margin;
-    text-align: center;
-
-    div {
-        background-color: $default-background;
-        padding: 0.2em 0 0 0;
-
-        img {
-            width: 3em;
-        }
-    }
-
-    p {
-        margin: $separador-margin;
-        background-color: $default-background;
-        padding: 0.1em 0;
-        font: map-get($font-weights, "light") map-get($font-sizes, quote(#{&})) $font-family;
-
-        & a:hover {
-            text-decoration: underline;
-            font-weight: map-get($font-weights, "bold");
-        }
-    }
+.bg-blue{
+    background-color: $background-blue;
 }
-
-@media (max-width: 768px) {
-
-    footer {
-
-        margin: $default-margin;
-
-        p {
-            margin: $default-margin;
-        }
-    }
-
+.bg-violet{
+    background-color: $background-violet;
+}
+.bg-red{
+    background-color: $background-red;
+}
+.bg-grey{
+    background-color: $background-grey;
+}
+.bg-gold{
+    background-color: $background-gold;
 }

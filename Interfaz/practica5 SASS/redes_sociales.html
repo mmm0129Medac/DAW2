@@ -1,86 +1,96 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redes Sociales</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
 </head>
 
-<body>
-    <header class="text-center bg-light p-3"> 
-        <img src="img/sass.svg" alt="Logo Sass" class="img-fluid" style="width: 10%;">
-        <h1 class="text-danger">Práctica 6</h1>
-        <h2 class="text-success">Redes Sociales</h2>
-    </header>
-    <nav class="bg-light p-1 my-3 text-center text-uppercase">
-        <ul class="list-inline">
-            <li class="list-inline-item"> <a href="index.html" class="text-dark">Inicio</a> </li>
-        </ul>
-    </nav>
-    <section class="container my-3">
-        <div class="row">
-            <article class="col-12 col-md-6 col-lg-4 mb-3"> <a href="https://www.facebook.com"
-                    class="d-block p-3 border rounded bg-white text-dark"> <img src="img/facebook.svg" alt="Facebook"
-                        class="img-fluid" style="width: 25%; float: left; padding-right: 1em;">
-                    <div style="overflow: hidden;">
-                        <h3>Facebook</h3>
-                        <p>Facebook, Inc. es una compañía estadounidense que ofrece servicios de redes sociales y medios
-                            sociales en línea.</p>
-                    </div>
-                </a> </article>
-            <article class="col-12 col-md-6 col-lg-4 mb-3"> <a href="https://www.twitter.com"
-                    class="d-block p-3 border rounded bg-white text-dark"> <img src="img/x.svg" alt="X"
-                        class="img-fluid" style="width: 25%; float: left; padding-right: 1em;">
-                    <div style="overflow: hidden;">
-                        <h3>X</h3>
-                        <p>X es un servicio de microblogging con sede en San Francisco, California, con filiales en San
-                            Antonio y Boston.</p>
-                    </div>
-                </a> </article>
-            <article class="col-12 col-md-6 col-lg-4 mb-3"> <a href="https://www.youtube.com"
-                    class="d-block p-3 border rounded bg-white text-dark"> <img src="img/youtube.svg" alt="YouTube"
-                        class="img-fluid" style="width: 25%; float: left; padding-right: 1em;">
-                    <div style="overflow: hidden;">
-                        <h3>YouTube</h3>
-                        <p>YouTube es un sitio web dedicado a compartir videos. Presenta una variedad de clips de
-                            películas, programas de televisión y más.</p>
-                    </div>
-                </a> </article>
-            <article class="col-12 col-md-6 col-lg-4 mb-3"> <a href="https://www.linkedin.com"
-                    class="d-block p-3 border rounded bg-white text-dark"> <img src="img/linkedin.svg" alt="LinkedIn"
-                        class="img-fluid" style="width: 25%; float: left; padding-right: 1em;">
-                    <div style="overflow: hidden;">
-                        <h3>LinkedIn</h3>
-                        <p>LinkedIn es una comunidad social orientada a las empresas, a los negocios y el empleo. La web
-                            pone en contacto a millones de empresas y empleados.</p>
-                    </div>
-                </a> </article>
-            <article class="col-12 col-md-6 col-lg-4 mb-3"> <a href="https://www.instagram.com"
-                    class="d-block p-3 border rounded bg-white text-dark"> <img src="img/instagram.svg" alt="Instagram"
-                        class="img-fluid" style="width: 25%; float: left; padding-right: 1em;">
-                    <div style="overflow: hidden;">
-                        <h3>Instagram</h3>
-                        <p>Instagram es una red social y aplicación para subir fotos y vídeos, disponible para
-                            dispositivos Android e iOS.</p>
-                    </div>
-                </a> </article>
-            <article class="col-12 col-md-6 col-lg-4 mb-3"> <a href="https://www.pinterest.com"
-                    class="d-block p-3 border rounded bg-white text-dark"> <img src="img/pinterest.svg" alt="Pinterest"
-                        class="img-fluid" style="width: 25%; float: left; padding-right: 1em;">
-                    <div style="overflow: hidden;">
-                        <h3>Pinterest</h3>
-                        <p>Pinterest es una plataforma que permite a los usuarios crear y administrar colecciones de
-                            imágenes como eventos, intereses y más.</p>
-                    </div>
-                </a> </article>
+<body class="container">
+    <header>
+        <div class="row flex-column flex-md-row justify-content-between">
+            <img src="img/sass.svg" alt="sass" class="col-12 col-md-2">
+            <div class="col-12 col-md-8">
+                <h1>Práctica 6</h1>
+                <h2>Redes Sociales</h2>
+            </div>
         </div>
-    </section>
+        <div class="nav row flex-column flex-md-row justify-content-md-between row-gap-3">
+            <div class="col"><a href="index.html">Inicio</a></div>
+        </div>
+    </header>
+    <main>
+        <section class="container my-3">
+            <div class="row">
+                <article class="col-12 col-md-6 col-lg-4 mb-3 h-100"> <a href="https://www.facebook.com"
+                        class="d-block p-3 bg-l-blue text-dark"> <img src="img/facebook.svg"
+                            alt="Facebook" class="img-fluid" style="width: 25%; float: left; padding-right: 1em;">
+                        <div style="overflow: hidden;">
+                            <h3>Facebook</h3>
+                            <p>Facebook, Inc. es una compañía estadounidense que ofrece servicios de redes sociales y
+                                medios
+                                sociales en línea.</p>
+                        </div>
+                    </a> </article>
+                <article class="col-12 col-md-6 col-lg-4 mb-3"> <a href="https://www.twitter.com"
+                        class="d-block p-3 bg-blue text-dark"> <img src="img/x.svg" alt="X"
+                            class="img-fluid" style="width: 25%; float: left; padding-right: 1em;">
+                        <div style="overflow: hidden;">
+                            <h3>X</h3>
+                            <p>X es un servicio de microblogging con sede en San Francisco, California, con filiales en
+                                San
+                                Antonio y Boston.</p>
+                        </div>
+                    </a> </article>
+                <article class="col-12 col-md-6 col-lg-4 mb-3"> <a href="https://www.youtube.com"
+                        class="d-block p-3 bg-violet text-dark"> <img src="img/youtube.svg" alt="YouTube"
+                            class="img-fluid" style="width: 25%; float: left; padding-right: 1em;">
+                        <div style="overflow: hidden;">
+                            <h3>YouTube</h3>
+                            <p>YouTube es un sitio web dedicado a compartir videos. Presenta una variedad de clips de
+                                películas, programas de televisión y más.</p>
+                        </div>
+                    </a> </article>
+                <article class="col-12 col-md-6 col-lg-4 mb-3"> <a href="https://www.linkedin.com"
+                        class="d-block p-3 bg-red text-dark"> <img src="img/linkedin.svg" alt="LinkedIn"
+                            class="img-fluid" style="width: 25%; float: left; padding-right: 1em;">
+                        <div style="overflow: hidden;">
+                            <h3>LinkedIn</h3>
+                            <p>LinkedIn es una comunidad social orientada a las empresas, a los negocios y el empleo. La
+                                web
+                                pone en contacto a millones de empresas y empleados.</p>
+                        </div>
+                    </a> </article>
+                <article class="col-12 col-md-6 col-lg-4 mb-3"> <a href="https://www.instagram.com"
+                        class="d-block p-3 bg-grey text-dark"> <img src="img/instagram.svg"
+                            alt="Instagram" class="img-fluid" style="width: 25%; float: left; padding-right: 1em;">
+                        <div style="overflow: hidden;">
+                            <h3>Instagram</h3>
+                            <p>Instagram es una red social y aplicación para subir fotos y vídeos, disponible para
+                                dispositivos Android e iOS.</p>
+                        </div>
+                    </a> </article>
+                <article class="col-12 col-md-6 col-lg-4 mb-3"> <a href="https://www.pinterest.com"
+                        class="d-block p-3 bg-gold text-dark"> <img src="img/pinterest.svg"
+                            alt="Pinterest" class="img-fluid" style="width: 25%; float: left; padding-right: 1em;">
+                        <div style="overflow: hidden;">
+                            <h3>Pinterest</h3>
+                            <p>Pinterest es una plataforma que permite a los usuarios crear y administrar colecciones de
+                                imágenes como eventos, intereses y más.</p>
+                        </div>
+                    </a> </article>
+            </div>
+        </section>
+    </main>
     <footer class="text-center my-3">
         <div class="bg-light p-2">
             <p>Moisés Moreno Mendoza</p> <a href="#" class="text-dark">aqui va el enlace de git</a>
             <p>30/10/2024</p>
         </div>
+    </footer>
+</body>
+</html>
