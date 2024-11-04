@@ -374,4 +374,146 @@ section article div {
 
 .bg-gold {
   background-color: rgb(255, 172, 86);
+}
+
+.color-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.color-info article {
+  flex: 1 1 calc(25% - 2rem);
+  text-align: center;
+}
+.color-info article h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.color-info article .color {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+.deep-sky-blue {
+  background-color: #00BFFF;
+  width: 100px;
+  height: 100px;
+}
+
+.deep-sky-blue + .color-info-text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.deep-sky-blue + .color-info-text:before {
+  content: "Nombre: deep-sky-blue\a Color HEX: #00BFFF\a Color RGB: 0, 191, 255\a Color HSL: 195deg, 100%%, 50%%";
+  white-space: pre-line;
+  display: block;
+}
+
+.deep-sky-blue-light {
+  background-color: #80dfff;
+  width: 80px;
+  height: 80px;
+}
+
+.deep-sky-blue-dark {
+  background-color: #006080;
+  width: 80px;
+  height: 80px;
+}
+
+.medium-sea-green {
+  background-color: #3CB371;
+  width: 100px;
+  height: 100px;
+}
+
+.medium-sea-green + .color-info-text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.medium-sea-green + .color-info-text:before {
+  content: "Nombre: medium-sea-green\a Color HEX: #3CB371\a Color RGB: 60, 179, 113\a Color HSL: 147deg, 50%%, 47%%";
+  white-space: pre-line;
+  display: block;
+}
+
+.medium-sea-green-light {
+  background-color: #94dbb3;
+  width: 80px;
+  height: 80px;
+}
+
+.medium-sea-green-dark {
+  background-color: #1c5435;
+  width: 80px;
+  height: 80px;
+}
+
+.tomato {
+  background-color: #FF6347;
+  width: 100px;
+  height: 100px;
+}
+
+.tomato + .color-info-text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.tomato + .color-info-text:before {
+  content: "Nombre: tomato\a Color HEX: #FF6347\a Color RGB: 255, 99, 71\a Color HSL: 9deg, 100%%, 64%%";
+  white-space: pre-line;
+  display: block;
+}
+
+.tomato-light {
+  background-color: #ffcfc7;
+  width: 80px;
+  height: 80px;
+}
+
+.tomato-dark {
+  background-color: #c71e00;
+  width: 80px;
+  height: 80px;
+}
+
+.gold {
+  background-color: #FFD700;
+  width: 100px;
+  height: 100px;
+}
+
+.gold + .color-info-text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.gold + .color-info-text:before {
+  content: "Nombre: gold\a Color HEX: #FFD700\a Color RGB: 255, 215, 0\a Color HSL: 51deg, 100%%, 50%%";
+  white-space: pre-line;
+  display: block;
+}
+
+.gold-light {
+  background-color: #ffeb80;
+  width: 80px;
+  height: 80px;
+}
+
+.gold-dark {
+  background-color: #806c00;
+  width: 80px;
+  height: 80px;
+}
+
+.tone {
+  border: 1px solid #000;
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=style.css.map */

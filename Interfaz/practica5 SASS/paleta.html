@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Práctica 5</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="container">
     <header>
@@ -14,19 +14,91 @@
             <img src="img/sass.svg" alt="sass" class="col-12 col-md-2">
             <div class="col-12 col-md-8">
                 <h1>Práctica 6</h1>
-                <h2>Diseño de interfaces web - Procesador CSS: SASS</h2>
+                <h2>Paleta de colores</h2>
             </div>
         </div>
         <div class="nav row flex-column flex-md-row justify-content-md-between row-gap-3">
             <div class="col"><a href="index.html">Inicio</a></div>
         </div>
+        </div>
     </header>
     <main>
-        
+        <!-- Sección de Información de Colores -->
+        <section class="color-info">
+            <div class="container">
+                <div class="row">
+                    <h2 class="text-center col-12">Colores Principales</h2>
+                    <p class="text-center col">Estos son los colores principales de tu página web.</p>
+                </div>
+            </div>
+            <article class="text-center mb-4">
+                <h3>Deep Sky Blue</h3>
+                <div class="color deep-sky-blue mx-auto"></div>
+                <div class="color-info-text"></div>
+            </article>
+            <article class="text-center mb-4">
+                <h3>Medium Sea Green</h3>
+                <div class="color medium-sea-green mx-auto"></div>
+                <div class="color-info-text"></div>
+            </article>
+            <article class="text-center mb-4">
+                <h3>Tomato</h3>
+                <div class="color tomato mx-auto"></div>
+                <div class="color-info-text"></div>
+            </article>
+            <article class="text-center mb-4">
+                <h3>Gold</h3>
+                <div class="color gold mx-auto"></div>
+                <div class="color-info-text"></div>
+            </article>
+        </section>
+
+        <!-- Sección de Tonalidades -->
+        <section class="color-tones">
+            <h2 class="text-center mt-4 mb-3">Tonalidades</h2>
+            <p class="text-center mb-5">Estos colores son variaciones de tonalidad de nuestros colores primarios (25% más claro, normal y 75% más oscuro), útiles para hovers, ilustraciones o pequeñas variaciones.</p>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-3 text-center">
+                        <h3>Deep Sky Blue</h3>
+                        <div class="d-flex flex-nowrap">
+                            <div class="tone deep-sky-blue-light"></div>
+                            <div class="tone deep-sky-blue"></div>
+                            <div class="tone deep-sky-blue-dark"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 text-center">
+                        <h3>Medium Sea Green</h3>
+                        <div class="d-flex flex-nowrap">
+                            <div class="tone medium-sea-green-light"></div>
+                            <div class="tone medium-sea-green"></div>
+                            <div class="tone medium-sea-green-dark"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 text-center">
+                        <h3>Tomato</h3>
+                        <div class="d-flex flex-nowrap">
+                            <div class="tone tomato-light"></div>
+                            <div class="tone tomato"></div>
+                            <div class="tone tomato-dark"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 text-center">
+                        <h3>Gold</h3>
+                        <div class="d-flex flex-nowrap">
+                            <div class="tone gold-light"></div>
+                            <div class="tone gold"></div>
+                            <div class="tone gold-dark"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="text-center my-3">
         <div class="bg-light p-2">
-            <p>Moisés Moreno Mendoza</p> <a href="#" class="text-dark">aqui va el enlace de git</a>
+            <p>Moisés Moreno Mendoza</p>
+            <a href="#" class="text-dark">aquí va el enlace de git</a>
             <p>30/10/2024</p>
         </div>
     </footer>
