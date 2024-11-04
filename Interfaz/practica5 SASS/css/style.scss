@@ -1,0 +1,149 @@
+@forward 'normalize';
+@import 'variables';
+
+header{
+    *{
+        text-decoration: none;
+    }
+    img {
+        width: 10%;
+        float: left;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: $main-font-color;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        width: 90%;
+        color: $main-font-color;
+    }
+
+    .nav {
+        background-color: $background-pink;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        a {
+            color: $main-font-color;
+            background-color: white;
+            padding: .5rem;
+        }
+        div :hover {
+            color: black;
+        }
+    }
+}
+
+section {
+
+    article {
+        width: 33%;
+        
+        min-height: 16em;
+
+        img {
+            width: 25%;
+            
+            padding: 0 1em 0 0;
+        }
+
+        div {
+            width: 65%;
+            
+            padding: 1em 1em 0 0;
+        }
+
+    }
+}
+
+// Fondos
+
+.bg-l-blue{
+    background-color: $background-l-blue;
+}
+.bg-blue{
+    background-color: $background-blue;
+}
+.bg-violet{
+    background-color: $background-violet;
+}
+.bg-red{
+    background-color: $background-red;
+}
+.bg-grey{
+    background-color: $background-grey;
+}
+.bg-gold{
+    background-color: $background-gold;
+}
+
+// Añadido de paleta
+
+$colors: (
+    "deep-sky-blue": #00BFFF,
+    "medium-sea-green": #3CB371,
+    "tomato": #FF6347,
+    "gold": #FFD700
+);
+
+.color-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    article {
+        flex: 1 1 calc(25% - 2rem);
+        text-align: center;
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .color {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+    }
+}
+
+@each $name, $color in $colors {
+    .#{$name} {
+        background-color: $color;
+        width: 100px;
+        height: 100px;
+    }
+
+    .#{$name} + .color-info-text {
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        text-align: center;
+
+        &:before {
+            content: "Nombre: #{$name}\A Color HEX: #{inspect($color)}\A Color RGB: #{red($color)}, #{green($color)}, #{blue($color)}\A Color HSL: #{round(hue($color))}, #{round(saturation($color))}%, #{round(lightness($color))}%";
+            white-space: pre-line;
+            display: block;
+        }
+    }
+
+    // Tonalidades
+    .#{$name}-light {
+        background-color: lighten($color, 25%);
+        width: 80px;
+        height: 80px;
+    }
+
+    .#{$name}-dark {
+        background-color: darken($color, 25%);
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.tone {
+    border: 1px solid #000;
+    margin: 0;
+    padding: 0;
+}

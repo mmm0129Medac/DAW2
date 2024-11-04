@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de Personajes</h1>
+    <label for="razaselector">Filtrado por raza: </label>
+    <select name="razaselector" id="razaselector">
+        <option value="todos">Todos</option>
+        <option value="hobbit">Hobbit</option>
+        <option value="humano">Humano</option>
+        <option value="elfo">Elfo</option>
+        <option value="enano">Enano</option>
+        <option value="maiar">Maiar</option>
+    </select>
+    <button onclick=filtrerData(datapj)>Filtrar</button>
+    <ul id="pjsList">
+        <!--Aqui se insertan los personajes-->
+    </ul>
+    <script src="act1.js"></script>
+</body>
+</html>

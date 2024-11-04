@@ -1,0 +1,107 @@
+[
+    {
+        "nombre": "Bilbo",
+        "edad": 128,
+        "raza": "hobbit"
+    },
+    {
+        "nombre": "Gollum",
+        "edad": 588,
+        "raza": "hobbit"
+    },
+    {
+        "nombre": "Frodo",
+        "edad": 50,
+        "raza": "hobbit"
+    },
+    {
+        "nombre": "Sam",
+        "edad": 36,
+        "raza": "hobbit"
+    },
+    {
+        "nombre": "Merry",
+        "edad": 36,
+        "raza": "hobbit"
+    },
+    {
+        "nombre": "Pippin",
+        "edad": 28,
+        "raza": "hobbit"
+    },
+    {
+        "nombre": "Gimli",
+        "edad": 139,
+        "raza": "enano"
+    },
+    {
+        "nombre": "Legolas",
+        "edad": 2931,
+        "raza": "elfo"
+    },
+    {
+        "nombre": "Aragorn",
+        "edad": 87,
+        "raza": "humano"
+    },
+    {
+        "nombre": "Boromir",
+        "edad": 40,
+        "raza": "humano"
+    },
+    {
+        "nombre": "Faramir",
+        "edad": 35,
+        "raza": "humano"
+    },
+    {
+        "nombre": "Denethor",
+        "edad": 89,
+        "raza": "humano"
+    },
+    {
+        "nombre": "Eowyn",
+        "edad": 23,
+        "raza": "humano"
+    },
+    {
+        "nombre": "Eomer",
+        "edad": 27,
+        "raza": "humano"
+    },
+    {
+        "nombre": "Théoden",
+        "edad": 70,
+        "raza": "humano"
+    },
+    {
+        "nombre": "Elladan",
+        "edad": 2888,
+        "raza": "Elfo"
+    },
+    {
+        "nombre": "Arwen",
+        "edad": 2777,
+        "raza": "elfo"
+    },
+    {
+        "nombre": "Elrond",
+        "edad": 6517,
+        "raza": "elfo"
+    },
+    {
+        "nombre": "Galadriel",
+        "edad": 8371,
+        "raza": "elfo"
+    },
+    {
+        "nombre": "Gandalf",
+        "edad": 9999,
+        "raza": "maiar"
+    },
+    {
+        "nombre": "Sauron",
+        "edad": 9999,
+        "raza": "maiar"
+    }
+]

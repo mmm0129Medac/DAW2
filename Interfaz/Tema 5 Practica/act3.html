@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="act3.css">
+</head>
+<body>
+    <h1>Control de Tareas</h1>
+    
+    <form id="taskForm">
+        Nombre de la tarea: <input type="text" id="taskName" required>
+        Fecha de entrega: <input type="date" id="taskDate" required>
+        <button type="button" onclick="addTask()">Añadir Tarea</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Fecha de Entrega</th>
+                <th>Completada</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody id="taskTable">
+            <!-- Aquí se insertan los datos de las tareas -->
+        </tbody>
+    </table>
+
+    <script src="act3.js"></script>
+</body>
+</html>
