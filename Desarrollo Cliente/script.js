@@ -82,6 +82,115 @@ document.addEventListener("DOMContentLoaded", function() {
     // Inicializar la visualización de las habitaciones
     fetchRooms().then(rooms => displayRooms(sortRooms(rooms, sortCriteriaSelect.value)));
 
+    // Validar datos del formulario
+    function validateForm(formData, rooms) {
+        const number = formData.get("room-number");
+        const name = formData.get("room-name");
+        const type = formData.get("room-type");
+        const prize = formData.get("room-prize");
+        const date = formData.get("room-date");
+        const errors = [];
+
+        // Validar número de habitación
+        if (!/^\d{3}$/.test(number)) {
+            errors.push("El número de habitación debe tener exactamente 3 dígitos.");
+        }
+        if (rooms.some(room => room.numero === parseInt(number, 10))) {
+            errors.push("El número de habitación ya existe.");
+        }
+
+        // Validar nombre de la habitación
+        if (!/^\w+\s+\w+/.test(name)) {
+            errors.push("El nombre de la habitación debe contener al menos dos palabras.");
+        }
+
+        // Validar tipo de habitación
+        if (!["Individual", "Doble", "Suite"].includes(type)) {
+            errors.push("El tipo de habitación debe ser Individual, Doble o Suite.");
+        }
+
+        // Validar precio por noche
+        if (!(parseFloat(prize) > 0 && /^\d+(\.\d{1,2})?$/.test(prize))) {
+            errors.push("El precio por noche debe ser un número positivo y puede tener hasta dos decimales.");
+        }
+
+        // Validar fecha de disponibilidad
+        const currentDate = new Date();
+        const availabilityDate = new Date(date);
+        if (availabilityDate <= currentDate) {
+            errors.push("La fecha de disponibilidad debe ser una fecha futura.");
+        }
+
+        return errors;
+    }
+
+    // Formatear nombre de la habitación
+    function formatRoomName(name) {
+        return name.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+    }
+
+    // Añadir nueva habitación
+    addRoomForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const formData = new FormData(addRoomForm);
+        const rooms = await fetchRooms();
+
+        const errors = validateForm(formData, rooms);
+        if (errors.length > 0) {
+            alert(errors.join("\n"));
+            return;
+        }
+
+        const newRoom = {
+            id: formData.get("room-number"),
+            numero: parseInt(formData.get("room-number"), 10),
+            nombre: formatRoomName(formData.get("room-name")),
+            tipo: formData.get("room-type"),
+            precio: parseFloat(formData.get("room-prize")),
+            fechaDisponibilidad: formData.get("room-date"),
+            reservada: false
+        };
+
+        const response = await fetch(API_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newRoom)
+        });
+
+        if (response.ok) {
+            displayRooms();
+            addRoomForm.reset();
+        }
+    });
+
+    // Reservar o Liberar habitación
+    async function toggleReservation(roomId, isReserved) {
+        const response = await fetch(`${API_URL}/${roomId}`, {
+            method: "PATCH", 
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ reservada: !isReserved })
+        });
+
+        if (response.ok) {
+            displayRooms();
+        }
+    }
+
+    // Eliminar habitación
+    async function deleteRoom(roomId) {
+        const response = await fetch(`${API_URL}/${roomId}`, {
+            method: "DELETE"
+        });
+
+        if (response.ok) {
+            displayRooms();
+        }
+    }
+
     // Añadir eventos a los botones de informes
     reportButtons.forEach(button => {
         button.addEventListener("click", generateReport);
