@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica tema 6 y 7</title>
+    <style>
+        canvas {
+            background-color: #2f2f2f; /* Gris oscuro */
+            display: block;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <figure>
+            <picture> <!-- Alta resolución (mínimo 1024px de ancho) -->
+                <source srcset="img/image7r.jpg" media="(min-width: 1024px)">
+                <!-- Resolución media (entre 640px y 1024px) -->
+                <source srcset="img/image7r_media.jpg" media="(min-width: 640px)">
+                <!-- Baja resolución (máximo 640px de ancho) -->
+                <source srcset="img/image7r_baja.jpg" media="(max-width: 640px)"> <!-- Imagen por defecto --> <img
+                    src="img/image7r_media.jpg" alt="Imagen del día">
+            </picture>
+            <figcaption>Corythaeola cristata, especie autóctona de Uganda.</figcaption>
+        </figure>
+    </section>
+    <section>
+        <svg width="200" height="200">
+            <!-- Rectángulo azul -->
+            <rect x="50" y="80" width="100" height="40" fill="blue" />
+            <!-- Círculo rojo -->
+            <circle cx="100" cy="100" r="20" fill="red" />
+            <!-- Línea amarilla -->
+            <line x1="0" y1="0" x2="200" y2="200" stroke="yellow" stroke-width="2" />
+            <!-- Texto diagonal --> 
+            <text x="0" y="200" transform="rotate(-45, 0, 200)" fill="purple"> - Texto Diagonal
+        </svg>
+    </section>
+    <section>
+        <canvas id="semaforo" width="100" height="300"></canvas>
+        <script src="semaforo.js"></script>
+    </section>
+    <section>
+        <!-- Video -->
+        <video controls autoplay muted width="640" height="360">
+            <source src="media/sample_2.avi" type="video/avi">
+            <source src="media/output.webm" type="video/webm">
+            Tu navegador no soporta el elemento de video.
+        </video>
+
+        <!-- Audio -->
+        <audio controls loop>
+            <source src="media/sample3.mp3" type="audio/mpeg">
+            <source src="media/output.ogg" type="audio/ogg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </section>
+</body>
+
+</html>
